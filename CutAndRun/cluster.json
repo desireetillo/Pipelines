@@ -1,0 +1,111 @@
+{
+    "__default__": {
+        "mem": "48g",
+        "time": "96:00:00",
+        "partition": "norm",
+        "threads": "4",
+        "gres": "lscratch:256"
+    },
+    "trim_CutAndRun": {
+        "mem": "64g",
+        "time": "24:00:00",
+        "threads": "32",
+        "partition": "ccr",
+        "gres": "lscratch:100"
+    },
+    "fastqc": {
+        "mem": "12g",
+        "time": "24:00:00",
+        "threads": "32",
+        "partition": "ccr"
+    },
+    "multiqc": {
+        "mem": "12g",
+        "time": "2:00:00",
+        "partition": "ccr"
+    },
+    "align_CutAndRun": {
+        "mem": "64g",
+        "time": "24:00:00",
+        "threads": "32",
+        "partition": "ccr"
+    },
+    "splitSpikein_CutAndRun": {
+        "mem": "64g",
+        "time": "24:00:00",
+        "threads": "32",
+        "partition": "ccr"
+    },
+    "filterBam_CutAndRun": {
+        "mem": "24g",
+        "partition": "ccr",
+        "time": "2:00:00"
+    },
+    "bam2bigwig_CutAndRun": {
+        "threads": "32",
+        "mem": "24g",
+        "time": "2:00:00"
+    },
+    "QC_plots": {
+        "mem": "64g",
+        "time": "24:00:00",
+        "threads": "32",
+        "partition": "ccr"
+    },
+    "readstats": {
+        "mem": "64g",
+        "time": "4:00:00",
+        "threads": "16",
+        "partition": "ccr"
+    },
+    "readstats_table": {
+        "mem": "2g",
+        "time": "2:00:00",
+        "partition": "quick"
+    },
+    "FRiP": {
+        "mem": "64g",
+        "time": "4:00:00",
+        "partition": "ccr"
+    },
+    "compile_FRiP": {
+        "mem": "2g",
+        "time": "2:00:00",
+        "threads": "16",
+        "partition": "quick"
+    },
+    "NRF":{
+        "mem":"24g",
+        "gres":"lscratch:256",
+        "partition":"ccr"
+    },
+    "ppqt": {
+        "mem": "24g",
+        "gres": "lscratch:256",
+        "partition":"ccr"
+    },
+    "macs_peakcall": {
+        "mem": "64g",
+        "time": "4:00:00",
+        "partition": "ccr"
+    },
+    "seacr_peakcall": {
+        "mem": "64g",
+        "time": "4:00:00",
+        "threads": "16",
+        "partition": "ccr",
+        "gres": "lscratch:100"
+    },
+    "macs_peakcall_120": {
+        "mem": "64g",
+        "time": "4:00:00",
+        "partition": "ccr"
+    },
+    "seacr_peakcall_120": {
+        "mem": "64g",
+        "time": "4:00:00",
+        "threads": "16",
+        "partition": "ccr",
+        "gres": "lscratch:100"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "bin": {
+        "BISMARKVER": "bismark/0.22.1", 
+        "FASTQCVER": "fastqc/0.11.9", 
+        "MULTIQCVER": "multiqc/1.9", 
+        "TRIMGALOREVER": "trimgalore/0.6.5", 
+        "UCSCVER": "ucsc/400"
+    }, 
+    "project": {
+        "annotation": "mm10", 
+        "cluster": "cluster.json", 
+        "data_type": "RRBS", 
+        "experiment_name": "TESTESTEST", 
+        "gsize": "mm", 
+        "sample_vector": [
+            0, 
+            0, 
+            1, 
+            1
+        ], 
+        "samples": [
+            "A", 
+            "B", 
+            "C", 
+            "D"
+        ], 
+        "username": "tillodc@nih.gov", 
+        "workpath": "/Users/tillodc/Documents/GAU/CODE/Pipelines/RRBS"
+    }, 
+    "references": {
+        "BISMARK": "db/bismark_mm10", 
+        "REFLEN": "/data/CCBR_Pipeliner/db/PipeDB/lib/mm10.len"
+    }
+}

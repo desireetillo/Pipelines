@@ -1,0 +1,9 @@
+1594919928:Thu Jul 16 13:18:48 EDT 2020:#cp template_CutAndRunConfig.json template_RRBS.json
+1594919931:Thu Jul 16 13:18:51 EDT 2020:#e template_RRBS.json 
+1594921152:Thu Jul 16 13:39:12 EDT 2020:#e template_RRBS.json 
+1594922176:Thu Jul 16 13:56:16 EDT 2020:#module avail bismark
+1594922177:Thu Jul 16 13:56:17 EDT 2020:#MODULEPATH="/usr/local/lmod/modulefiles"; export MODULEPATH; _ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPTg2NDAwLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXt9LG1wYXRoQT17Ii91c3IvbG9jYWwvbG1vZC9tb2R1bGVmaWxlcyIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyL2xvY2FsL2xtb2QvbW9kdWxlZmlsZXMiLH0="; export _ModuleTable001_; _ModuleTable_Sz_="1"; export _ModuleTable_Sz_;
+1594922222:Thu Jul 16 13:57:02 EDT 2020:#module avail trim_galore
+1594922222:Thu Jul 16 13:57:02 EDT 2020:#MODULEPATH="/usr/local/lmod/modulefiles"; export MODULEPATH; _ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPTg2NDAwLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXt9LG1wYXRoQT17Ii91c3IvbG9jYWwvbG1vZC9tb2R1bGVmaWxlcyIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyL2xvY2FsL2xtb2QvbW9kdWxlZmlsZXMiLH0="; export _ModuleTable001_; _ModuleTable_Sz_="1"; export _ModuleTable_Sz_;
+1594922236:Thu Jul 16 13:57:16 EDT 2020:#module avail trimgalore
+1594922237:Thu Jul 16 13:57:17 EDT 2020:#MODULEPATH="/usr/local/lmod/modulefiles"; export MODULEPATH; _ModuleTable001_="X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPTg2NDAwLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXt9LG1wYXRoQT17Ii91c3IvbG9jYWwvbG1vZC9tb2R1bGVmaWxlcyIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvdXNyL2xvY2FsL2xtb2QvbW9kdWxlZmlsZXMiLH0="; export _ModuleTable001_; _ModuleTable_Sz_="1"; export _ModuleTable_Sz_;

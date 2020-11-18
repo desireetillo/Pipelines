@@ -1,0 +1,13 @@
+{
+   "bin":{
+      "BISMARKVER":"bismark/0.22.1",
+      "TRIMGALOREVER":"trimgalore/0.6.5",
+      "UCSCVER":"ucsc/400",
+      "FASTQCVER":"fastqc/0.11.9",
+      "MULTIQCVER":"multiqc/1.9"
+   },
+   "references":{
+      "BISMARK":"db/bismark_mm10",
+      "REFLEN":"/data/CCBR_Pipeliner/db/PipeDB/lib/mm10.len"
+   }
+}

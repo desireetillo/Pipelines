@@ -1,0 +1,71 @@
+{
+    "bin": {
+        "CutAndRun": {
+            "BEDOPSVER": "bedops/2.4.30", 
+            "BEDTOOLSVER": "bedtools/2.27.1", 
+            "BOWTIE2VER": "bowtie/2-2.2.6", 
+            "DEEPTOOLSVER": "deeptools/3.0.1", 
+            "FASTQCVER": "fastqc/0.11.5", 
+            "KSEQBIN": "Scripts/CutAndRunTools", 
+            "MACS2VER": "macs/2.1.1.20160309", 
+            "MULTIQCVER": "multiqc/1.4", 
+            "PRESEQVER": "preseq/2.0.3", 
+            "RVER": "R/3.5", 
+            "SAMTOOLS": "/usr/local/apps/samtools/1.6/bin/samtools", 
+            "SAMTOOLSVER": "samtools/1.6", 
+            "SEACRVER": "SEACR/1.3", 
+            "TRIMMOMATICVER": "trimmomatic/0.36", 
+            "UCSCVER": "ucsc/365"
+        }
+    }, 
+    "project": {
+        "annotation": "mm10", 
+        "chips": [
+            "A", 
+            "B"
+        ], 
+        "cluster": "cluster.json", 
+        "controls": [
+            "1", 
+            "2"
+        ], 
+        "data_type": "CutAndRun", 
+        "experiment_name": "TEST", 
+        "gsize": "mm", 
+        "username": "tillodc@nih.gov", 
+        "workpath": "/Users/tillodc/Documents/GAU/Pipelines/CutAndRun"
+    }, 
+    "references": {
+        "CutAndRun": {
+            "BOWTIE2": "db/bowtie2_index/mm10_MG1655", 
+            "CHRLIST": "db/bowtie2_index/mm10_MG1655.len2", 
+            "CHROMS": [
+                "chr1", 
+                "chr2", 
+                "chr3", 
+                "chr4", 
+                "chr5", 
+                "chr6", 
+                "chr7", 
+                "chr8", 
+                "chr9", 
+                "chr10", 
+                "chr11", 
+                "chr12", 
+                "chr13", 
+                "chr14", 
+                "chr15", 
+                "chr16", 
+                "chr17", 
+                "chr18", 
+                "chr19", 
+                "chrX", 
+                "chrY", 
+                "chrM"
+            ], 
+            "FASTAWITHADAPTERSETD": "db/TruSeq_and_nextera_adapters.consolidated.fa", 
+            "REFLEN": "db/PipeDB/lib/mm10.len", 
+            "SPIKEINCHROMS": "NC_000913.3"
+        }
+    }
+}
