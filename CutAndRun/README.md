@@ -153,11 +153,11 @@ read1 and read2 must end with _R?.gz
 
 Construct a pairs.tab file (tab-delimited file containing IDs of IP and control sample), used for peak-calling:
 
-#IP<tab>control
+#IP\<tab\>control
 
-sample1<tab>control1
+sample1\<tab\>control1
 
-sample2<tab>control2
+sample2\<tab\>control2
 
 Then run:
 
