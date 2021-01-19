@@ -33,7 +33,7 @@ rule all:
         expand(join(workpath,"multiqc_report.html")),
         expand(join(workpath,bigwig_dir,"{name}_cov.bw"),name=samples),
         expand(join(workpath,bigwig_dir,"{name}_meth.bw"),name=samples),
-        expand(join(workpath, processed_dir,"{name}_pe.CpG_report.txt.gz"),name=samples),
+        expand(join(workpath,processed_dir,"{name}_pe.CpG_report.txt.gz"),name=samples),
         expand(join(workpath,processed_dir,"{name}_pe.bedGraph.gz.bismark.zero.cov"),name=samples),
         expand(join(workpath,bam_dir, "{name}_pe.bam"),name=samples),
         expand(join(workpath,trim_dir,"{name}_R{rn}_val_{rn}.fq.gz"), name=samples,rn=[1,2]),

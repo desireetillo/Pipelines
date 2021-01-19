@@ -2,32 +2,71 @@
 
 ## Overview
 
-Most steps and some borrowed code from this paper, as well as CCBR's pipeliner:
+A workflow to process Cut&Run data on the [NIH biowulf cluster](https://hpc.nih.gov). Most steps and some borrowed code from this [paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1802-4), as well as [CCBR's Pipeliner](https://github.com/CCBR/Pipeliner).
 
-[CUT&RUNTools: a flexible pipeline for CUT&RUN processing and footprint analysis](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-019-1802-4)
 
-Dependencies, locations of annotations are in the file run.json
+## Dependencies
 
-List of tools/dependencies (can probably update to the latest and greatest versions of these tools):
 
-bedops/2.4.30 
-bedtools/2.27.1
-bowtie/2-2.2.6
-deeptools/3.0.1
-fastqc/0.11.5
-macs/2.1.1.20160309
-multiqc/1.4
-preseq/2.0.3
-samtools/1.6
-SEACR/1.3
-trimmomatic/0.36
-R/3.5
-python/2.7
-python/3.6
+	snakemake/5.1.3
+	bedops/2.4.30  
+	bedtools/2.27.1 
+	bowtie/2-2.2.6  
+	deeptools/3.0.1  
+	fastqc/0.11.5  
+	macs/2.1.1.20160309  
+	multiqc/1.4  
+	preseq/2.0.3  
+	samtools/1.6  
+	SEACR/1.3  
+	trimmomatic/0.36  
+	R/3.5  
+	python/2.7 
+	python/3.6 
 
-A set of utility scripts in the "Scripts/" directory
 
-References/annotations are in "db/" directory
+## Setup
+
+There are a set set of utility scripts in the "Scripts/" directory.  If pulling from github, must run the following before running the pipeline:
+
+`chmod +x Scripts/CutAndRunTools/kseq_test Scripts/perl_lib/*pl`
+
+
+Dependencies and paths reference annotation are set in the file Templates/template_CutAndRunConfig.json and may be edited to suit your purposes.
+
+---
+
+
+## Setting up a run on biowulf
+
+Put fastqs in directory FASTQ/
+
+read1 and read2 must end with _R?.gz
+
+Construct a pairs.tab file (tab-delimited file containing IDs of IP and control sample), used for peak-calling:
+
+	#IP<tab>control
+	sample1<tab>control1
+	sample2<tab>control2
+
+Then run:
+
+`python Scripts/make_config.py --prefix CutAndRun_Test --template Templates/template_CutAndRunConfig.json --pairs pairs.tab`
+
+This generates the "run.json" file, which contains all of the parameters for the run.
+
+
+
+To do a dry run: 
+
+`module load snakemake/5.1.3`
+
+
+`snakemake -n` 
+
+To submit the workflow on biowulf (NIH HPC):
+
+`sbatch run_analysis.sh`
 
 ---
 
@@ -38,7 +77,7 @@ References/annotations are in "db/" directory
     Tools:
 
     - trimmomatic/0.36
-    - kseq_test (if grabbing from github, do chmod +x Scripts/CutAndRunTools/kseq_test Scripts/perl_lib/*pl)
+    - kseq\_test (if grabbing from github, do chmod +x Scripts/CutAndRunTools/kseq_test Scripts/perl\_lib/*pl)
 
     Trim sequences using `trimmomatic`
 
@@ -143,77 +182,38 @@ python {params.kseqbin}/get_summits_seacr.py {output.relaxed} | sort-bed -  >{ou
 4. Deeptools QC plots (PCA, scatterplot, heatmap) from bigwigs (**rule QC_plots**)
 5. FRiP score on peak calls (**rule FRiP**)
 
----
-
-## Setting up a run on biowulf
-
-Data in directory FASTQ/
-
-read1 and read2 must end with _R?.gz
-
-Construct a pairs.tab file (tab-delimited file containing IDs of IP and control sample), used for peak-calling:
-
-#IP\<tab\>control
-
-sample1\<tab\>control1
-
-sample2\<tab\>control2
-
-Then run:
-
-`python Scripts/make_config.py --prefix CutAndRun_Test --template Templates/template_CutAndRunConfig.json --pairs pairs.tab`
-
-This generates the "run.json" file, which contains all of the parameters for the run
-
-
-
-do a dry run: 
-
-`module load snakemake/5.1.3`
-
-
-`snakemake -n` 
-
-to run on biowulf:
-
-`sbatch run_analysis.sh`
 
 ## **Outputs**
 
+
+All processed files will be found in the following directories: 
+
+
 **Trimmed fastqs:**
 
-trim/ 
-
-trim_QC/
+	trim/ 
+	trim_QC/
 
 **Alignments**: 
 
-bam/ 
-
-split_bam/
-
-bam.120bp/
+	bam/ 
+	split_bam/
+	bam.120bp/
 
 **Signal tracks:**
 
-bigwig/
+	bigwig/
 
 **QC:**
 
-FRiP/
-
-deeptools/
-
-QC/ ← read/alignment statistics here
-
-multiqc_data/
+	FRiP/
+	deeptools/
+	QC/ ← read/alignment statistics here
+	multiqc_data/
 
 **Peak calls:**
-
-seacr_peaks/
-
-macs_peaks/
-
-macs_peaks.120bp/
-
-seacr_peaks.120bp/
+	
+	seacr_peaks/
+	macs_peaks/
+	macs_peaks.120bp/
+	seacr_peaks.120bp/
