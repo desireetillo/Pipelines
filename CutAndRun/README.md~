@@ -32,14 +32,14 @@ There are a set set of utility scripts in the "Scripts/" directory.  If pulling 
 `chmod +x Scripts/CutAndRunTools/kseq_test Scripts/perl_lib/*pl`
 
 
-Dependencies and paths to reference annotations and alignment indices are set in the file Templates/template_CutAndRunConfig.json and may be edited to suit your purposes.
+Dependencies and paths reference annotation are set in the file Templates/template_CutAndRunConfig.json and may be edited to suit your purposes.
 
 ---
 
 
 ## Setting up a run on biowulf
 
-Fastqs must be in directory FASTQ/
+Put fastqs in directory FASTQ/
 
 read1 and read2 must end with _R?.gz
 
