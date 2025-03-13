@@ -11,7 +11,7 @@ Two workflows currently:
 
 * RRBS-SE.Snakefile - for single-read data
 * RRBS-PE.Snakefile - for paired-end data 
-*
+
 Dependencies, locations of annotations are in the file run.json
 
 A set of utility scripts in the "Scripts/" directory
